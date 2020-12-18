@@ -1,14 +1,14 @@
 ﻿# SSHPLUS MANAGER v31 (FREE) 
 # UPDATE 10/11/2020
 
-![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/SSHPLUS_MANAGER.jpg)
+![logo](https://github.com/radzvpn/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/SSHPLUS_MANAGER.jpg)
 
 
 ```
-SCRIPT SSHPLUS MANAGER es un script con un conjunto de características y herramientas adecuadas para 
-                 ofrecer extrema facilidad de manejo en servidores Linux con un enfoque en el uso de 
-                 VPN, tiene una interfaz agradable aportando información detallada sobre la máquina
-                 y los usuarios ...
+SCRIPT SSHPLUS MANAGER is a script with a set of features and tools suitable for
+                 offer extreme ease of handling on Linux servers with a focus on the use of
+                 VPN, has a pleasant interface providing detailed information about the machine
+                 and the users ...
 ```
 
 -------------------------------------------------------------------------------
@@ -17,32 +17,34 @@ SCRIPT SSHPLUS MANAGER es un script con un conjunto de características y herram
 
 ## :heavy_exclamation_mark: Requerimientos
 
-* Un sistema operativo basado en Linux (Ubuntu o Debian) 
-* Recomendamos Ubuntu 16.04 Server x86_64
-* Tambien puede funcionar en algunas versiones de  Debian Server x86_64
-* Se recomienda usar una distro nueva o formatiada
+
+* A Linux-based operating system (Ubuntu or Debian)
+* We recommend Ubuntu 16.04 Server x86_64
+* May also work on some versions of Debian Server x86_64
+* It is recommended to use a new or formatted distro
 
 ## Installation
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus
 
 
 -------------------------------------------------------------------------------
 
 # PANEL SSHPLUS (VERSIONES)
 
-![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Panel_SSHPLUS_Web.jpg)
+![logo](https://github.com/radzvpn/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Panel_SSHPLUS_Web.jpg)
 
 ```
-PANEL SSHPLUS es una herramienta completa de gestión y supervisión de usuarios que permite
-                 reventas y sub revendedores para aquellos que desean tener un negocio más amplio, 
-                 también tiene una interfaz intuitiva, a la que se puede acceder desde cualquier 
-                 navegador ...
+
+PANEL SSHPLUS is a complete management and user supervision tool that allows
+                 sales and sub-dealers for those who want to have a bigger deal,
+                 they also have an intuitive interface, which can be accessed from anywhere
+                 browser ...
 ```
 
 ## Installation
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/Panelweb.sh; chmod +x Panelweb.sh; ./Panelweb.sh
+wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/Panelweb.sh; chmod +x Panelweb.sh; ./Panelweb.sh
 
 
 -------------------------------------------------------------------------------
@@ -50,27 +52,28 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FR
 ```
 ## PANEL SSHPLUS v20 (Installation Directa)
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/panel_v20/install; chmod +x install; ./install
+wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/panel_v20/install; chmod +x install; ./install
 ```
 
 -------------------------------------------------------------------------------
 
 # TCP-Tweaker-1.0 (TCP-SPEED)
 
-![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/TCP_Tweaker_TCP_SPEED.jpg)
+![logo](https://github.com/radzvpn/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/TCP_Tweaker_TCP_SPEED.jpg)
 
 ## Installation
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
+wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
 
 -------------------------------------------------------------------------------
 
 ```
-* SIN MINERIA! 
-* SIN KEYS! 
-* VERSION GRATUITA 
-* SIN VIRUS TROJANO (BOTNET) 
-* ARCHIVOS LIBERADOS (DECENCRIPTADOS)
+
+* SIN MINERIA!
+* SIN KEYS!
+* FREE VERSION
+* SIN VIRUS TROJANO (BOTNET)
+* FILES RELEASED (DECRYPT)
 ```
 
 ```
