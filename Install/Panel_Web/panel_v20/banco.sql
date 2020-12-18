@@ -2,10 +2,10 @@
 -- version 4.0.10deb1ubuntu0.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tempo de Geração: 03/03/2020 às 20:35
--- Versão do servidor: 5.5.62-0ubuntu0.14.04.1
--- Versão do PHP: 5.5.9-1ubuntu4.29
+-- Server: localhost
+-- Generation Time: 03/03/2020 at 20:35
+-- Server version: 5.5.62-0ubuntu0.14.04.1
+-- PHP version: 5.5.9-1ubuntu4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,58 +17,58 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de dados: `sshplus`
+-- Database: `sshplus`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `acesso_servidor`
+-- Structure for `server_server` table
 --
 
-CREATE TABLE IF NOT EXISTS `acesso_servidor` (
-  `id_acesso_servidor` int(10) NOT NULL AUTO_INCREMENT,
-  `id_servidor` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_mestre` int(11) NOT NULL DEFAULT '0',
-  `id_servidor_mestre` int(11) NOT NULL DEFAULT '0',
-  `qtd` int(10) NOT NULL DEFAULT '0',
-  `validade` datetime NOT NULL,
-  `demo` int(2) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id_acesso_servidor`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+CREATE TABLE IF NOT EXISTS `server_server` (
+  `server_server_id` int (10) NOT NULL AUTO_INCREMENT,
+  `server_server int (11) NOT NULL,
+  `user_id` int (11) NOT NULL,
+  `id_mestre` int (11) NOT NULL DEFAULT '0',
+  `master_server_id` int (11) NOT NULL DEFAULT '0',
+  `qtd` int (10) NOT NULL DEFAULT '0',
+  datetime NOT NULL,
+  `demo` int (2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`server_server_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1 AUTO_INCREMENT = 4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `admin`
---
+- Structure for `admin` table
+-
 
 CREATE TABLE IF NOT EXISTS `admin` (
-  `id_administrador` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(60) NOT NULL,
-  `senha` varchar(60) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `accessKEY` varchar(100) DEFAULT NULL,
-  `site` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_administrador`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `admin_id` int (11) NOT NULL AUTO_INCREMENT,
+  `login` varchar (60) NOT NULL,
+  `password` varchar (60) NOT NULL,
+  `name` varchar (100) NOT NULL,
+  `email` varchar (100) NOT NULL,
+  `accessKEY` varchar (100) DEFAULT NULL,
+  `site` varchar (255) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1 AUTO_INCREMENT = 2;
 
---
--- Fazendo dump de dados para tabela `admin`
---
+-
+- Dumping data to the `admin` table
+-
 
-INSERT INTO `admin` (`id_administrador`, `login`, `senha`, `nome`, `email`, `accessKEY`, `site`) VALUES
-(1, 'admin', 'admin', 'Administrador', 'admin@gmail.com', NULL, 'www.seusite.com');
+INSERT INTO `admin` (` admin_id`, `login`,` password`, `name`,` email`, `accessKEY`,` website`) VALUES
+(1, 'admin', 'admin', 'Admin', 'admin@gmail.com', NULL, 'www.yoursite.com');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `anuncios`
+-- Table structure `ads`
 --
 
-CREATE TABLE IF NOT EXISTS `anuncios` (
+CREATE TABLE IF NOT EXISTS `adverts` (
   `anuncio1` text NOT NULL,
   `anuncio2` text NOT NULL,
   `anuncio3` text NOT NULL,
@@ -80,110 +80,109 @@ CREATE TABLE IF NOT EXISTS `anuncios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `arquivo_download`
+-- Structure for `file_download` table
 --
 
-CREATE TABLE IF NOT EXISTS `arquivo_download` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) NOT NULL,
-  `status` enum('funcionando','testes') NOT NULL,
-  `tipo` enum('ehi','apk','outros') NOT NULL,
-  `operadora` enum('todas','claro','vivo','tim','oi') NOT NULL,
+CREATE TABLE IF NOT EXISTS `file_download` (
+  `id` int (11) NOT NULL AUTO_INCREMENT,
+  `name` varchar (255) NOT NULL,
+  `status` enum ('working', 'tests') NOT NULL,
+  `tipo` enum ('ehi', 'apk', 'others') NOT NULL,
+  `operator` enum ('all', 'clear', 'alive', 'tim', 'hi') NOT NULL,
   `data` datetime NOT NULL,
-  `detalhes` text NOT NULL,
-  `nome_arquivo` varchar(255) NOT NULL,
-  `cliente_tipo` enum('vpn','revenda','todos') NOT NULL,
+  `details` text NOT NULL,
+  `filename` varchar (255) NOT NULL,
+  `type_ client` enum ('vpn', 'resale', 'all') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE = MyISAM DEFAULT CHARSET = latin1 AUTO_INCREMENT = 1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `chamados`
---
+-- Table structure `called`
+-
 
-CREATE TABLE IF NOT EXISTS `chamados` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
-  `id_mestre` int(11) NOT NULL DEFAULT '0',
-  `tipo` enum('contassh','revendassh','usuariossh','servidor','outros') NOT NULL,
-  `status` enum('aberto','resposta','encerrado') NOT NULL,
-  `resposta` text NOT NULL,
-  `login` varchar(255) NOT NULL,
-  `motivo` varchar(255) NOT NULL,
-  `mensagem` text NOT NULL,
+CREATE TABLE IF NOT EXISTS `called` (
+  `id` int (11) NOT NULL AUTO_INCREMENT,
+  `user_id` int (11) NOT NULL,
+  `id_mestre` int (11) NOT NULL DEFAULT '0',
+  `tipo` enum ('contassh', 'resellassh', 'userssh', 'server', 'others') NOT NULL,
+  `status` enum ('open', 'reply', 'closed') NOT NULL,
+  `reply` text NOT NULL,
+  `login` varchar (255) NOT NULL,
+  `reason` varchar (255) NOT NULL,
+  `message` text NOT NULL,
   `data` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE = MyISAM DEFAULT CHARSET = latin1 AUTO_INCREMENT = 1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `configuracao`
+-- Structure for table `configuration`
 --
 
 CREATE TABLE IF NOT EXISTS `configuracao` (
-  `id_configuracao` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(10) NOT NULL,
-  `titulo_pagina` varchar(60) NOT NULL,
+  `id_configuracao` int (11) NOT NULL AUTO_INCREMENT,
+  `user_id` int (10) NOT NULL,
+  `titulo_pagina` varchar (60) NOT NULL,
   PRIMARY KEY (`id_configuracao`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE = InnoDB DEFAULT CHARSET = latin1 AUTO_INCREMENT = 1 ;
 
--- --------------------------------------------------------
+-- ------------------------------------------------ --------
 
 --
--- Estrutura para tabela `fatura`
+-- Structure for table `invoice`
 --
 
-CREATE TABLE IF NOT EXISTS `fatura` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
-  `servidor_id` int(11) NOT NULL,
-  `conta_id` int(11) NOT NULL,
-  `tipo` enum('vpn','revenda','outros') NOT NULL,
-  `qtd` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `invoice` (
+  `id` int (11) NOT NULL AUTO_INCREMENT,
+  `user_id` int (11) NOT NULL,
+  `server_id` int (11) NOT NULL,
+  `conta_id` int (11) NOT NULL,
+  `tipo` enum ('vpn', 'resale', 'others') NOT NULL,
+  `qtd` int (11) NOT NULL,
   `data` datetime NOT NULL,
   `datavencimento` datetime NOT NULL,
-  `status` enum('pendente','cancelado','pago') NOT NULL,
-  `descrição` text NOT NULL,
-  `valor` int(11) NOT NULL,
-  `desconto` int(11) NOT NULL,
+  `status` enum ('pending', 'canceled', 'paid') NOT NULL,
+  `description` text NOT NULL,
+  `value` int (11) NOT NULL,
+  `discount` int (11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE = MyISAM DEFAULT CHARSET = latin1 AUTO_INCREMENT = 1 ;
 
--- --------------------------------------------------------
+-- ------------------------------------------------ --------
 
 --
--- Estrutura para tabela `fatura_clientes`
+-- Structure for table `invoice_clientes`
 --
 
-CREATE TABLE IF NOT EXISTS `fatura_clientes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
-  `id_mestre` int(11) NOT NULL DEFAULT '0',
-  `servidor_id` int(11) NOT NULL,
-  `conta_id` int(11) NOT NULL,
-  `tipo` enum('vpn','revenda','outros') NOT NULL,
-  `qtd` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `invoice_clientes` (
+  `id` int (11) NOT NULL AUTO_INCREMENT,
+  `user_id` int (11) NOT NULL,
+  `id_mestre` int (11) NOT NULL DEFAULT '0',
+  `server_id` int (11) NOT NULL,
+  `conta_id` int (11) NOT NULL,
+  `tipo` enum ('vpn', 'resale', 'others') NOT NULL,
+  `qtd` int (11) NOT NULL,
   `data` datetime NOT NULL,
   `datavencimento` datetime NOT NULL,
-  `status` enum('pendente','cancelado','pago') NOT NULL,
-  `descrição` text NOT NULL,
-  `valor` int(11) NOT NULL,
-  `desconto` int(11) NOT NULL,
+  `status` enum ('pending', 'canceled', 'paid') NOT NULL,
+  `description` text NOT NULL,
+  `value` int (11) NOT NULL,
+  `discount` int (11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
+) ENGINE = MyISAM DEFAULT CHARSET = latin1 AUTO_INCREMENT = 1 ;
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `fatura_comprovantes`
+-- Structure for table `invoice_comproving`
 --
 
-CREATE TABLE IF NOT EXISTS `fatura_comprovantes` (
+CREATE TABLE IF NOT EXISTS `invoice_comproving` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `fatura_id` int(11) NOT NULL,
-  `usuario_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `status` enum('aberto','fechado') NOT NULL DEFAULT 'aberto',
   `data` datetime NOT NULL,
   `formapagamento` enum('boleto','deptra') NOT NULL,
@@ -195,14 +194,14 @@ CREATE TABLE IF NOT EXISTS `fatura_comprovantes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `fatura_comprovantes_clientes`
+-- Structure for table `invoice vouchers to customers`
 --
 
-CREATE TABLE IF NOT EXISTS `fatura_comprovantes_clientes` (
+CREATE TABLE IF NOT EXISTS `invoice vouchers to customers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_mestre` int(11) NOT NULL DEFAULT '0',
   `fatura_id` int(11) NOT NULL,
-  `usuario_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `status` enum('aberto','fechado') NOT NULL DEFAULT 'aberto',
   `data` datetime NOT NULL,
   `formapagamento` enum('boleto','deptra') NOT NULL,
@@ -214,27 +213,27 @@ CREATE TABLE IF NOT EXISTS `fatura_comprovantes_clientes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `historico_login`
+-- Structure for table `historic_login`
 --
 
-CREATE TABLE IF NOT EXISTS `historico_login` (
-  `id_historico_login` int(10) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `historic_login` (
+  `id_historic_login` int(10) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NOT NULL,
   `data_login` datetime NOT NULL,
   `ip_login` varchar(100) NOT NULL,
   `navegador` varchar(100) NOT NULL,
-  PRIMARY KEY (`id_historico_login`)
+  PRIMARY KEY (`id_historic_login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `hist_usuario_ssh_online`
+-- Structure for table `hist_user_ssh_online`
 --
 
-CREATE TABLE IF NOT EXISTS `hist_usuario_ssh_online` (
+CREATE TABLE IF NOT EXISTS `hist_user_ssh_online` (
   `id_hist_usrSSH` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `hora_conexao` datetime NOT NULL,
   `hora_desconexao` datetime DEFAULT NULL,
   `status` int(11) NOT NULL,
@@ -244,12 +243,12 @@ CREATE TABLE IF NOT EXISTS `hist_usuario_ssh_online` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `hist_usuario_ssh_online_free`
+-- Structure for table `hist_user_ssh_online_free`
 --
 
-CREATE TABLE IF NOT EXISTS `hist_usuario_ssh_online_free` (
+CREATE TABLE IF NOT EXISTS `hist_user_ssh_online_free` (
   `id_hist_usrSSH` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `hora_conexao` datetime NOT NULL,
   `hora_desconexao` datetime DEFAULT NULL,
   `status` int(11) NOT NULL,
@@ -259,10 +258,10 @@ CREATE TABLE IF NOT EXISTS `hist_usuario_ssh_online_free` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `informativo`
+-- Structure for table `informative`
 --
 
-CREATE TABLE IF NOT EXISTS `informativo` (
+CREATE TABLE IF NOT EXISTS `informative` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data` datetime NOT NULL,
   `imagem` varchar(255) NOT NULL,
@@ -273,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `informativo` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `mercadopago`
+-- Structure for table `mercadopago`
 --
 
 CREATE TABLE IF NOT EXISTS `mercadopago` (
@@ -291,7 +290,7 @@ INSERT INTO `mercadopago` (`CLIENT_ID`, `CLIENT_SECRET`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `noticias`
+-- Structure for table `noticias`
 --
 
 CREATE TABLE IF NOT EXISTS `noticias` (
@@ -307,15 +306,15 @@ CREATE TABLE IF NOT EXISTS `noticias` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `notificacoes`
+-- Structure for table `notificacoes`
 --
 
 CREATE TABLE IF NOT EXISTS `notificacoes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `conta_id` int(11) NOT NULL,
   `data` datetime NOT NULL,
-  `tipo` enum('fatura','conta','revenda','outros','usuario','chamados') NOT NULL,
+  `tipo` enum('fatura','conta','revenda','outros','user','chamados') NOT NULL,
   `linkfatura` varchar(255) NOT NULL,
   `mensagem` text NOT NULL,
   `info_outros` varchar(50) NOT NULL,
@@ -327,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `notificacoes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `ovpn`
+-- Structure for table `ovpn`
 --
 
 CREATE TABLE IF NOT EXISTS `ovpn` (
@@ -342,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `ovpn` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `servidor`
+-- Structure for table `servidor`
 --
 
 CREATE TABLE IF NOT EXISTS `servidor` (
@@ -350,7 +349,7 @@ CREATE TABLE IF NOT EXISTS `servidor` (
   `ativo` int(10) NOT NULL DEFAULT '0',
   `nome` varchar(100) NOT NULL,
   `regiao` enum('asia','america','europa','australia') NOT NULL,
-  `limite_usuario` int(10) NOT NULL DEFAULT '0',
+  `limite_user` int(10) NOT NULL DEFAULT '0',
   `ip_servidor` varchar(100) NOT NULL,
   `site_servidor` varchar(255) NOT NULL,
   `login_server` varchar(30) NOT NULL,
@@ -371,7 +370,7 @@ CREATE TABLE IF NOT EXISTS `servidor` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sms`
+-- Structure for table `sms`
 --
 
 CREATE TABLE IF NOT EXISTS `sms` (
@@ -389,12 +388,12 @@ CREATE TABLE IF NOT EXISTS `sms` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `smtp`
+-- Structure for table `smtp`
 --
 
 CREATE TABLE IF NOT EXISTS `smtp` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `servidor` varchar(255) NOT NULL,
   `porta` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -406,13 +405,13 @@ CREATE TABLE IF NOT EXISTS `smtp` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `smtp_usuarios`
+-- Structure for table `smtp_users`
 --
 
-CREATE TABLE IF NOT EXISTS `smtp_usuarios` (
+CREATE TABLE IF NOT EXISTS `smtp_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ssl_secure` varchar(255) NOT NULL,
-  `usuario_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `servidor` varchar(255) NOT NULL,
   `empresa` varchar(255) NOT NULL,
   `porta` int(11) NOT NULL,
@@ -424,11 +423,11 @@ CREATE TABLE IF NOT EXISTS `smtp_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `usuario` (
-  `id_usuario` int(60) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `user` (
+  `id_user` int(60) NOT NULL AUTO_INCREMENT,
   `id_mestre` int(10) DEFAULT '0',
   `ativo` tinyint(1) NOT NULL DEFAULT '1',
   `atualiza_dados` int(11) NOT NULL DEFAULT '0',
@@ -450,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `idcliente_mp` varchar(255) NOT NULL,
   `tokensecret_mp` varchar(255) NOT NULL,
   `dadosdeposito` text NOT NULL,
-  PRIMARY KEY (`id_usuario`),
+  PRIMARY KEY (`id_user`),
   UNIQUE KEY `login` (`login`),
   UNIQUE KEY `token_user` (`token_user`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
@@ -458,12 +457,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario_ssh`
+-- Structure for table `user_ssh`
 --
 
-CREATE TABLE IF NOT EXISTS `usuario_ssh` (
-  `id_usuario_ssh` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_ssh` (
+  `id_user_ssh` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
   `id_servidor` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `login` varchar(30) NOT NULL,
@@ -476,17 +475,17 @@ CREATE TABLE IF NOT EXISTS `usuario_ssh` (
   `online_start` datetime DEFAULT NULL,
   `online_hist` int(11) NOT NULL DEFAULT '0',
   `demo` enum('nao','sim') NOT NULL DEFAULT 'nao',
-  PRIMARY KEY (`id_usuario_ssh`),
+  PRIMARY KEY (`id_user_ssh`),
   UNIQUE KEY `login` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario_ssh_free`
+-- Structure for table `user_ssh_free`
 --
 
-CREATE TABLE IF NOT EXISTS `usuario_ssh_free` (
+CREATE TABLE IF NOT EXISTS `user_ssh_free` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
