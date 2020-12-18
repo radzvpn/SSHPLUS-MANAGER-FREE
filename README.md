@@ -15,7 +15,7 @@ SCRIPT SSHPLUS MANAGER is a script with a set of features and tools suitable for
 
 **Manager Script**
 
-## :heavy_exclamation_mark: Requerimientos
+## :heavy_exclamation_mark: Requirements
 
 
 * A Linux-based operating system (Ubuntu or Debian)
