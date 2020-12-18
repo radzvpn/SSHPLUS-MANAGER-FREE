@@ -30,7 +30,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/ra
 
 -------------------------------------------------------------------------------
 
-# PANEL SSHPLUS (VERSIONES)
+# PANEL SSHPLUS (VERSIONS)
 
 ![logo](https://github.com/radzvpn/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Panel_SSHPLUS_Web.jpg)
 
@@ -50,7 +50,7 @@ wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Insta
 -------------------------------------------------------------------------------
 
 ```
-## PANEL SSHPLUS v20 (Installation Directa)
+## PANEL SSHPLUS v20 (Installation Direct)
 
 wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/panel_v20/install; chmod +x install; ./install
 ```
@@ -69,16 +69,4 @@ wget https://raw.githubusercontent.com/radzvpn/SSHPLUS-MANAGER-FREE/master/Insta
 
 ```
 
-* SIN MINERIA!
-* SIN KEYS!
-* FREE VERSION
-* SIN VIRUS TROJANO (BOTNET)
-* FILES RELEASED (DECRYPT)
-```
-
-```
-☆ https://t.me/admmanagerfree ☆
-
-```
-
-**By: [  ⃘⃤꙰✰ ]**
+By: Radz
